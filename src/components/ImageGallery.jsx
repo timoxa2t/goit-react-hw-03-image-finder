@@ -1,6 +1,7 @@
 import { Component } from "react";
 import styles from "../css/ImageGallery.module.css"
 import ImageGalleryItem from "./ImageGalleryItem";
+import PropTypes from "prop-types"
 
 export default class ImageGallery extends Component{
     
@@ -15,3 +16,8 @@ export default class ImageGallery extends Component{
         )
     }
 } 
+
+ImageGallery.propTypes = {
+    showBigImage: PropTypes.func,
+    images: PropTypes.array
+}

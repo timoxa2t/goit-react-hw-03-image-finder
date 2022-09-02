@@ -1,5 +1,6 @@
 import { Component } from "react";
 import styles from "../css/ImageGalleryItem.module.css"
+import PropTypes from "prop-types"
 
 export default class ImageGalleryItem extends Component{
     
@@ -16,3 +17,10 @@ export default class ImageGalleryItem extends Component{
         )
     }
 } 
+
+
+ImageGalleryItem.propTypes = {
+    smallImg: PropTypes.string, 
+    showBigImage: PropTypes.func, 
+    id: PropTypes.number
+}

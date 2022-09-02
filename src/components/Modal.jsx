@@ -1,6 +1,7 @@
 import { Component } from "react";
 
 import styles from '../css/Modal.module.css'
+import PropTypes from "prop-types"
 
 
 export default class Modal extends Component{
@@ -17,4 +18,9 @@ export default class Modal extends Component{
             </div>
         )
     }
+}
+
+Modal.propTypes = {
+    largeImg: PropTypes.string, 
+    onClick: PropTypes.func
 }
