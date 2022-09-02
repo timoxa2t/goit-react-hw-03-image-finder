@@ -12,7 +12,7 @@ import { Component } from "react";
 
 function findImg(images, id){
   console.log(images, id)
-  return images.find(img => img.id == id)
+  return images.find(img => img.id === id)
 }
 
 export class App extends Component{
@@ -46,7 +46,7 @@ export class App extends Component{
       showLoader: true
     })
     imgPromise.then(images => {
-      console.log(images)
+
       this.setState({
         images: [...previousImgs, ...images.hits], 
         showLoadMore: images.showLoadMore,
@@ -61,8 +61,7 @@ export class App extends Component{
   }
 
   openModal(evt){
-    const img = findImg(this.state.images, evt.currentTarget.id)
-    console.log(img)
+    const img = findImg(this.state.images, parseInt(evt.currentTarget.id))
     this.setState({
       showModal: true,
       chosenImg: img
