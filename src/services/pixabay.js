@@ -15,7 +15,7 @@ function sendRequest(params){
     
     const allParams = new URLSearchParams({...defaultParams, ...params})
  
-    const url = "https://pixabay.com/api?" + allParams
+    const url = "https://pixabay.com/api/?" + allParams
  
     return axios.get(url)
      .then((res) => {
